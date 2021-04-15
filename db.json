@@ -1,0 +1,44 @@
+{
+  "pokemon": [
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 1
+    },
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 2
+    },
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 3
+    },
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 4
+    },
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 5
+    },
+    {
+      "pokeName": "",
+      "pokeImg": "",
+      "id": 6
+    },
+    {
+      "pokeName": "ditto",
+      "pokeImg": "dittoImage",
+      "id": 7
+    },
+    {
+      "pokeName": "nuzleaf",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/274.png",
+      "id": 8
+    }
+  ]
+}
