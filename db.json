@@ -39,6 +39,31 @@
       "pokeName": "nuzleaf",
       "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/274.png",
       "id": 8
+    },
+    {
+      "pokeName": "arceus-normal",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png",
+      "id": 9
+    },
+    {
+      "pokeName": "duraludon",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/884.png",
+      "id": 10
+    },
+    {
+      "pokeName": "buizel",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/418.png",
+      "id": 11
+    },
+    {
+      "pokeName": "claydol",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/344.png",
+      "id": 12
+    },
+    {
+      "pokeName": "huntail",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/367.png",
+      "id": 13
     }
   ]
 }
