@@ -24,38 +24,40 @@ export default {
     };
   },
   created() {
-    // let ranPoke = Math.floor(Math.random() * 1000);
+    let ranPoke = Math.floor(Math.random() * 1000);
     this.axios
-      .get("https://pokeapi.co/api/v2/pokemon/" + 1)
+      .get("https://pokeapi.co/api/v2/pokemon/" + ranPoke)
       .then((response) => {
         this.pokeName = response.data.forms[0].name;
         this.pokeImg = response.data.sprites.front_default;
 
         this.axios.get(response.data.species.url).then((response) => {
-         
           let speciesLength = response.data.egg_groups.length;
           if (speciesLength > 1) {
             for (let x = 0; x < speciesLength; x++) {
-              this.pokeSpecies.push(response.data.egg_groups[x].name)
-              console.log(response.data.egg_groups[x].name);
-              console.log(this.pokeSpecies);
+              this.pokeSpecies.push(response.data.egg_groups[x].name);
+              // console.log(response.data.egg_groups[x].name);
+              // console.log(this.pokeSpecies);
             }
           } else {
-            this.pokeSpecies.push(response.data.egg_groups[0].name)
-            console.log(response.data.egg_groups[0].name);
-            console.log(this.pokeSpecies);
-
+            this.pokeSpecies.push(response.data.egg_groups[0].name);
+            // console.log(response.data.egg_groups[0].name);
+            // console.log(this.pokeSpecies);
           }
         });
-        
-        console.log(response.data.forms[0].name);
-        console.log(response.data.sprites.front_default);
+
+        // console.log(response.data.forms[0].name);
+        // console.log(response.data.sprites.front_default);
         // console.log(response.data.species.url);
       });
   },
   methods: {
     submit() {
-      let pokemon = { pokeName: this.pokeName, pokeImg: this.pokeImg };
+      let pokemon = {
+        pokeName: this.pokeName,
+        pokeImg: this.pokeImg,
+        pokeSpecies: this.pokeSpecies,
+      };
       console.log(pokemon);
       this.axios
         .post(`http://localhost:3000/pokemon`, pokemon)
