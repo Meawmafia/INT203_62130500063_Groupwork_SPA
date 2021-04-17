@@ -1,24 +1,30 @@
 <template>
   <div class="flex justify-start">
     <div class="flex flex-col text-left">
-      <h2>Name: {{ this.pokeName }}</h2>
-      <div :v-for="pokeSpecies">Species: {{ pokeSpecies }}</div>
-      <div>
-        {{pokeStats}}
-      </div>
+      <span>Name: {{pokeName}}</span>
+      <ul>
+        <!-- <li :v-for=""></li> -->
+      </ul>
+
     </div>
 
     <img :src="pokeImg" id="pokemon" />
-    <img alt="doctor" id="doctor" class="" src="../assets/doctor.png" />
+    <!-- <img alt="doctor" id="doctor" class="" src="../assets/doctor.png" /> -->
   </div>
-  <Button msg="Add profile" router="/Add" @click="submit"></Button>
+  <ButtonRouter msg="Add profile" router="/Add" @click="submit"></ButtonRouter>
+  <Button msg="Reroll" @click="getPoke"></Button>
+
 </template>
 <script>
+import ButtonRouter from "@/components/ButtonRouter.vue";
 import Button from "@/components/Button.vue";
+
+// import Text from "@/components/Text.vue";
 export default {
-  name: "ButtonMsg",
+
   components: {
-    Button,
+    ButtonRouter,
+    Button
   },
   data() {
     return {
@@ -31,7 +37,28 @@ export default {
     
     };
   },
+  mounted(){
+  this.getPoke();
+  },
   created() {
+  },
+  methods: {
+    submit() {
+      let pokemon = {
+        pokeName: this.pokeName,
+        pokeImg: this.pokeImg,
+        pokeSpecies: this.pokeSpecies,
+        pokeStats: this.pokeStats
+      };
+      console.log(pokemon);
+      this.axios
+        .post(`http://localhost:3000/pokemon`, pokemon)
+        .then((response) => {
+          console.log(response);
+        }).catch(err => alert(err));
+    },
+    getPoke(){
+
     let ranPoke = Math.floor(Math.random() * 1000);
     // let statsPoke = { hp: 0, atk: 0, def: 0, specialAtk: 0, specialDef: 0, spd: 0 }
       
@@ -48,45 +75,22 @@ export default {
           if (speciesLength > 1) {
             for (let x = 0; x < speciesLength; x++) {
               this.pokeSpecies.push(response.data.egg_groups[x].name);
-              // console.log(response.data.egg_groups[x].name);
-              // console.log(this.pokeSpecies);
+      
             }
           } else {
             this.pokeSpecies.push(response.data.egg_groups[0].name);
-            // console.log(response.data.egg_groups[0].name);
-            // console.log(this.pokeSpecies);
+            
           }
-        });
+        }).catch(err => alert(err));
 
         let arrStat = []
         for (let x = 0; x < 5; x++) {
         arrStat.push([response.data.stats[x].stat.name,response.data.stats[x].base_stat])
         }
          this.pokeStats = Object.fromEntries(arrStat)
-           console.log(this.pokeStats);
-        // console.log(arrStat);
-        // Object.assign(this.pokeStats,arrStat)
-        //   console.log(this.pokeStats)
-        //   console.log(response.data.stats[0].base_stat);
-        // // console.log(response.data.forms[0].name);
-        // console.log(response.data.sprites.front_default);
-        // console.log(response.data.species.url);
-      });
-  },
-  methods: {
-    submit() {
-      let pokemon = {
-        pokeName: this.pokeName,
-        pokeImg: this.pokeImg,
-        pokeSpecies: this.pokeSpecies,
-        pokeStats: this.pokeStats
-      };
-      console.log(pokemon);
-      this.axios
-        .post(`http://localhost:3000/pokemon`, pokemon)
-        .then((response) => {
-          console.log(response);
-        });
+           
+    
+      }).catch(err => alert(err));
     },
   },
 };
