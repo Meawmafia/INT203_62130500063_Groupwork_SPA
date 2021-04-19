@@ -23,11 +23,7 @@ const routes = [
     name: 'Buddy',
     component: () => import(/* webpackChunkName: "about" */ '../views/Buddy.vue')
   },
-  {
-    path: '/add',
-    name: 'Add',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Add.vue')
-  }
+ 
 ]
 
 const router = createRouter({
