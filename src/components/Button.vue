@@ -1,5 +1,5 @@
 <template>
-    <button class="h-10 px-5 m-2 text-blue-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-700">
+    <button @click="edit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         {{msg}}
     </button>
 </template>
@@ -9,6 +9,7 @@ export default{
     name: 'Button',
   props: {
     msg: String,
-  }
+  },
+
 }
 </script>
