@@ -1,11 +1,16 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/Profile">Profile</router-link>
-    <router-link to="/Buddy">Bruh</router-link>
-
+  <div id="nav" class="px-2 py-3 bg-blue-500 flex justify-center">
+    <div class="text-xl font-bold leading-relaxed inline-block mr-20 py-2 whitespace-nowrap uppercase text-white hover:opacity-75">
+      <router-link to="/Profile">Profile</router-link>
+    </div>
+    <div class="text-xl font-bold leading-relaxed inline-block mr-20 py-2 whitespace-nowrap uppercase text-white hover:opacity-75">
+      <router-link to="/">Home</router-link>
+    </div>
+    <div class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white hover:opacity-75">
+      <router-link to="/Buddy">Catch</router-link>
+    </div>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
@@ -15,18 +20,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

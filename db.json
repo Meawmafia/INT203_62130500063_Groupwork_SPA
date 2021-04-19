@@ -1,61 +1,103 @@
 {
   "pokemon": [
     {
-      "pokeName": "bulbasaur",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-      "pokeSpecies": [
-        "monster",
-        "plant"
-      ],
-      "id": 1
-    },
-    {
-      "pokeName": "lucario",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
-      "pokeSpecies": [
-        "ground",
-        "humanshape"
-      ],
-      "id": 2
-    },
-    {
-      "pokeName": "vikavolt",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/738.png",
+      "pokeName": "test",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/543.png",
       "pokeSpecies": [
         "bug"
       ],
+      "pokeStats": {
+        "hp": 30,
+        "attack": 45,
+        "defense": 59,
+        "special-attack": 30,
+        "special-defense": 39
+      },
+      "id": 1,
+      "isOn": false,
+      "pokeId": 0
+    },
+    {
+      "pokeName": "corsola",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png",
+      "pokeSpecies": [
+        "water1",
+        "water3"
+      ],
+      "pokeStats": {
+        "hp": 65,
+        "attack": 55,
+        "defense": 95,
+        "special-attack": 65,
+        "special-defense": 95
+      },
+      "id": 2
+    },
+    {
+      "pokeName": "blissey",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
+      "pokeSpecies": [
+        "fairy"
+      ],
+      "pokeStats": {
+        "hp": 255,
+        "attack": 10,
+        "defense": 10,
+        "special-attack": 75,
+        "special-defense": 135
+      },
       "id": 3
     },
     {
-      "pokeName": "bulbasaur",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "pokeName": "pelipper",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png",
       "pokeSpecies": [
-        "monster",
-        "plant"
+        "water1",
+        "flying"
       ],
+      "pokeStats": {
+        "hp": 60,
+        "attack": 50,
+        "defense": 100,
+        "special-attack": 95,
+        "special-defense": 70
+      },
       "id": 4
     },
     {
-      "pokeName": "boltund",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/836.png",
-      "pokeSpecies": [],
+      "pokeName": "eiscue-ice",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/875.png",
+      "pokeSpecies": [
+        "water3",
+        "ground",
+        "humanshape"
+      ],
+      "pokeStats": {
+        "hp": 75,
+        "attack": 80,
+        "defense": 110,
+        "special-attack": 65,
+        "special-defense": 90
+      },
       "id": 5
     },
     {
-      "pokeName": "sandygast",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/769.png",
+      "pokeName": "spinarak",
+      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
       "pokeSpecies": [
-        "indeterminate"
+        "no-eggs",
+        "water1",
+        "water3",
+        "bug"
       ],
+      "pokeStats": {
+        "hp": 40,
+        "attack": 60,
+        "defense": 40,
+        "special-attack": 40,
+        "special-defense": 40
+      },
       "id": 6
-    },
-    {
-      "pokeName": "pyukumuku",
-      "pokeImg": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/771.png",
-      "pokeSpecies": [
-        "water1"
-      ],
-      "id": 7
     }
   ]
 }
