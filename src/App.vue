@@ -11,6 +11,7 @@
     </div>
   </div>
   <router-view />
+  <!-- comment -->
 </template>
 
 <style>
